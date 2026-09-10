@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* ==================================================
+     LEGALMETRIX NATURAL TRUST COLOR SYSTEM - LIGHT THEME
+     Proportions: ~70% Warm White/Surfaces, ~20% Forest Teal/Sage, ~10% Wheat/Sand
+     ================================================== */
+  --color-background: #FAF9F5;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F4F1E9;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-subtle: #EEF3EF;
+
+  --color-primary: #426B5A;
+  --color-primary-hover: #345749;
+  --color-primary-text: #FFFFFF;
+
+  --color-secondary: #8FAF9A;
+  --color-secondary-hover: #7E9E89;
+  --color-secondary-light: #EEF3EF;
+
+  --color-accent: #D8C79B;
+  --color-accent-hover: #C9B88A;
+  --color-soft-sand: #E8E1D2;
+
+  /* Typography: High contrast, dark muted neutral derived from #303530 */
+  --color-text-primary: #303530;
+  --color-text-secondary: #5C6B61;
+  --color-text-muted: #6B7B70;
+  --color-text-inverse: #FAF9F5;
+
+  --color-border: #E8E1D2;
+  --color-border-subtle: #EDE7DB;
+  --color-border-focus: #426B5A;
+
+  /* Header specific */
+  --color-header-bg: #FAF9F5;
+  --color-header-text: #303530;
+  --color-header-subtitle: #5C6B61;
+  --color-header-border: #E8E1D2;
+
+  /* Regulatory status tokens (Calm, non-neon, official Natural Trust) */
+  --color-status-compliant-bg: #EAF2ED;
+  --color-status-compliant-text: #2C493D;
+  --color-status-compliant-border: #8FAF9A;
+
+  --color-status-noncompliant-bg: #F6F0E4;
+  --color-status-noncompliant-text: #6B4E23;
+  --color-status-noncompliant-border: #D8C79B;
+
+  --color-status-review-bg: #F2EFE9;
+  --color-status-review-text: #4D534E;
+  --color-status-review-border: #D2CBC0;
+
+  /* Shared alias mappings */
+  --bg-canvas: var(--color-background);
+  --bg-surface: var(--color-surface);
+  --bg-surface-secondary: var(--color-surface-secondary);
+  --bg-surface-elevated: var(--color-surface-elevated);
+  --bg-sand: var(--color-soft-sand);
+  --text-main: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --text-inverse: var(--color-text-inverse);
+  --border-default: var(--color-border);
+  --border-subtle: var(--color-border-subtle);
+  --border-focus: var(--color-border-focus);
+}
+
+.dark {
+  /* ==================================================
+     LEGALMETRIX NATURAL TRUST COLOR SYSTEM - DARK THEME
+     Genuinely dark background #202622, Primary Surface #2B332E, Secondary #343D37
+     ================================================== */
+  --color-background: #202622;
+  --color-surface: #2B332E;
+  --color-surface-secondary: #343D37;
+  --color-surface-elevated: #343D37;
+  --color-surface-subtle: #27302A;
+
+  --color-primary: #6F9B84;
+  --color-primary-hover: #5D8671;
+  --color-primary-text: #FFFFFF;
+
+  --color-secondary: #8FAF9A;
+  --color-secondary-hover: #7E9E89;
+  --color-secondary-light: #343D37;
+
+  --color-accent: #C8B77F;
+  --color-accent-hover: #B8A66C;
+  --color-soft-sand: #3F4A43;
+
+  /* Typography: Readable muted light neutrals */
+  --color-text-primary: #F5F3EA;
+  --color-text-secondary: #D4D0C5;
+  --color-text-muted: #B0ACA0;
+  --color-text-inverse: #202622;
+
+  --color-border: #3F4A43;
+  --color-border-subtle: #343D37;
+  --color-border-focus: #6F9B84;
+
+  /* Header specific (Dark mode) */
+  --color-header-bg: #202622;
+  --color-header-text: #F5F3EA;
+  --color-header-subtitle: #C5C2B8;
+  --color-header-border: #3F4A43;
+
+  /* Regulatory status tokens (Dark mode) */
+  --color-status-compliant-bg: #23352B;
+  --color-status-compliant-text: #C4E2D0;
+  --color-status-compliant-border: #4A6E59;
+
+  --color-status-noncompliant-bg: #3B3426;
+  --color-status-noncompliant-text: #E8D5B0;
+  --color-status-noncompliant-border: #8E7C4F;
+
+  --color-status-review-bg: #323834;
+  --color-status-review-text: #DCD7CC;
+  --color-status-review-border: #545D56;
+
+  /* Shared alias mappings */
+  --bg-canvas: var(--color-background);
+  --bg-surface: var(--color-surface);
+  --bg-surface-secondary: var(--color-surface-secondary);
+  --bg-surface-elevated: var(--color-surface-elevated);
+  --bg-sand: var(--color-soft-sand);
+  --text-main: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --text-inverse: var(--color-text-inverse);
+  --border-default: var(--color-border);
+  --border-subtle: var(--color-border-subtle);
+  --border-focus: var(--color-border-focus);
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-secondary: var(--color-surface-secondary);
+  --color-surface-elevated: var(--color-surface-elevated);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-text: var(--color-primary-text);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  --color-secondary-light: var(--color-secondary-light);
+
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-soft-sand: var(--color-soft-sand);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+
+  --color-border: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+
+  /* Specific Natural Trust palette tokens */
+  --color-forest: #426B5A;
+  --color-forest-dark: #2C493D;
+  --color-forest-light: #5B8A75;
+  --color-forest-accent: #6F9B84;
+  --color-sage: #8FAF9A;
+  --color-sage-light: #D5E2D9;
+  --color-sage-dark: #6C8E79;
+  --color-wheat: #D8C79B;
+  --color-wheat-dark: #C8B77F;
+  --color-wheat-light: #EDE4CE;
+  --color-sand: #E8E1D2;
+  --color-sand-light: #F4EFE6;
+  --color-warm-white: #FAF9F5;
+  --color-charcoal: #303530;
+  --color-charcoal-slate: #202622;
+  --color-charcoal-surface: #2B332E;
+  --color-charcoal-secondary: #343D37;
+  --color-dark-text: #F5F3EA;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
