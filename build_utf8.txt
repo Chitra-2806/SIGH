@@ -1,0 +1,29 @@
+
+> react-example@0.0.0 build
+> vite build
+
+[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 1977 modules transformed.
+[31m✗[39m Build failed in 2.03s
+[31merror during build:
+[31msrc/context/AuthContext.tsx (3:33): "clearAuthToken" is not exported by "src/services/api.js", imported by "src/context/AuthContext.tsx".[31m
+file: [36mC:/Users/Priya/Downloads/legalmetrix (1)/src/context/AuthContext.tsx:3:33[31m
+[33m
+1: import React, { createContext, useContext, useState, useEffect } from 'react';
+2: import { User, UserRole } from '../types';
+3: import { apiService, API_CONFIG, clearAuthToken } from '../services/api';
+                                    ^
+4: 
+5: export const DEMO_INSPECTOR: User = {
+[31m
+    at getRollupError (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/parseAst.js:317:41)
+    at error (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/parseAst.js:313:42)
+    at Module.error (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:17230:16)
+    at Module.traceVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:17663:29)
+    at ModuleScope.findVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:15253:39)
+    at ReturnValueScope.findVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at FunctionBodyScope.findVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at ReturnValueScope.findVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at FunctionBodyScope.findVariable (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at Identifier.bind (file:///C:/Users/Priya/Downloads/legalmetrix%20(1)/node_modules/rollup/dist/es/shared/node-entry.js:5213:40)[39m

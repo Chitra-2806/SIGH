@@ -1,0 +1,10 @@
+{
+  "name": "LegalMetriX",
+  "description": "Compliance checking software system for packaged commodities under the Legal Metrology (Packaged Commodities) Rules, 2011 (SIH26034).",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
